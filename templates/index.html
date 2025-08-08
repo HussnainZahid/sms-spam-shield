@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMS Spam Shield</title>
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon-16x16.png">
+    <link rel="manifest" href="/static/images/site.webmanifest">
+    <link rel="shortcut icon" href="/static/images/favicon.ico">
+    
+    <!-- Styles & Fonts -->
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="/static/css/animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="logo-container">
+                <i class="fas fa-shield-alt logo-icon"></i>
+                <h1>SMS Spam Shield</h1>
+            </div>
+            <p class="tagline">AI-powered spam detection</p>
+        </header>
+
+        <main class="main-content">
+            <div class="detector-card">
+                <div class="card-header">
+                    <h2>Spam Detection</h2>
+                    <div class="status-indicator" id="status-indicator">
+                        <div class="indicator-dot"></div>
+                        <span>System Ready</span>
+                    </div>
+                </div>
+
+                <form id="prediction-form" class="detector-form">
+                    <div class="input-group">
+                        <label for="message">Enter SMS Message:</label>
+                        <textarea id="message" name="message" placeholder="Paste your SMS here..." required></textarea>
+                        <div class="char-counter"><span id="char-count">0</span>/500</div>
+                    </div>
+
+                    <button type="submit" class="analyze-btn">
+                        <span class="btn-text">Analyze Message</span>
+                        <i class="fas fa-search btn-icon"></i>
+                    </button>
+                </form>
+
+                <div class="result-container" id="result-container">
+                    <div class="result-card hidden" id="result-card">
+                        <div class="result-icon"></div>
+                        <h3 class="result-title"></h3>
+                        <p class="result-message"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <div class="info-card">
+                    <i class="fas fa-info-circle info-icon"></i>
+                    <h3>How It Works</h3>
+                    <p>Our AI analyzes message content using natural language processing to identify spam patterns with 98% accuracy.</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-lock info-icon"></i>
+                    <h3>Privacy First</h3>
+                    <p>All processing happens in your browser. We never store your messages on our servers.</p>
+                </div>
+            </div>
+        </main>
+
+        <footer class="app-footer">
+            <p>© 2023 Spam Shield | Powered by XGBoost AI</p>
+        </footer>
+    </div>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
